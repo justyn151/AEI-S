@@ -41,7 +41,7 @@ passwd
 # create new user
 user=''
 read -p "Enter a username: " user
-adduser $user
+useradd $user
 
 # set the new user password
 passwd $user
