@@ -2,9 +2,6 @@
 drives=''
 read -p "Enter drives: " drives
 
-# chroot
-arch-chroot /mnt
-
 # set timezone
 region=''
 city=''
