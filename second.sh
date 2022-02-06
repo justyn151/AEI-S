@@ -59,7 +59,7 @@ grub-mkconfig -o >> /boot/grub/grub.cfg
 pacman -S networkmanager
 
 # enabling the network manager
-systemctl enable networkmanager
+systemctl enable NetworkManager
 
 # exit out from arch-chroot
 exit
