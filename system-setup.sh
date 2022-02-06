@@ -46,6 +46,18 @@ useradd $user
 # set the new user password
 passwd $user
 
+# add user to group
+usermod -aG wheel,audio,video,optical,storage $user
+
+# installing sudo
+pacman -S sudo
+
+# editting the /etc/sudoers (instruction)
+echo "+ Uncomment the line that have %wheel%"
+
+# openning the file
+EDITOR=vim visudo
+
 # installing grub
 pacman -S grub
 
@@ -63,10 +75,3 @@ systemctl enable NetworkManager
 
 # exit out from arch-chroot
 exit
-
-# unmount the partition
-umount /mnt
-
-# reboot the system
-reboot
-  
