@@ -1,4 +1,5 @@
 # drives
+fdisk -l
 drives=''
 read -p "Enter drives: " drives
 
