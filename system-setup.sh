@@ -49,11 +49,11 @@ passwd $user
 # add user to group
 usermod -aG wheel,audio,video,optical,storage $user
 
-# installing sudo
-pacman -S sudo
-
 # editting the /etc/sudoers (instruction)
 echo "+ Uncomment the line that have %wheel%"
+
+# installing sudo
+pacman -S sudo
 
 # openning the file
 EDITOR=vim visudo
