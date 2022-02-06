@@ -53,7 +53,7 @@ pacman -S grub
 grub-install $drives
 
 # creating grub config
-grub-mkconfig -o >> /boot/grub/grub.cfg
+grub-mkconfig -o /boot/grub/grub.cfg
 
 # installing network manager
 pacman -S networkmanager
