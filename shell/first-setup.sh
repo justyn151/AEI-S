@@ -4,6 +4,7 @@ echo "######################"
 echo "# DRIVE PARTITIONING #"
 echo "######################"
 
+echo ""
 # list all available drive using fdisk -l
 fdisk -l
 
@@ -35,22 +36,19 @@ echo "#####################"
 echo "# MAKING FILESYSTEM #"
 echo "#####################"
 
+echo ""
 # set filesystem to ext4
 files=''
 fdisk -l
 read -p "Select the biggest partition: " files
 mkfs.ext4 $files
 
-echo "######################"
-echo "# MOUNTING PARTITION #"
-echo "######################"
+echo "#######################################################"
+echo "# MOUNTING PARTITION AND INSTALLING LINUX BASE SYSTEM #"
+echo "#######################################################"
 
 # mounting the filesystem
 mount $files /mnt
-
-echo "####################################"
-echo "# INSTALLING THE LINUX BASE SYSTEM #"
-echo "####################################"
 
 # installing the system
 pacstrap /mnt base linux linux-firmware
